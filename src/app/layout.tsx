@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "@/components/layout/Header";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -10,8 +11,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <title>Home | wisteria.dev</title>
           </head>
           <body>
-            <header>{children}</header>
-            <main></main>
+            <Header />
+            <main>{children}</main>
           </body>
         </html>
       </>
