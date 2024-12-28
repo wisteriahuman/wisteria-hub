@@ -1,6 +1,11 @@
 import React from "react";
 import SearchAppBar from "@/components/layout/SearchAppBar";
 
+export const metadata = {
+  title: "wisteria.dev",
+  description: "wisteria.dev のポートフォリオサイト。最新のプロジェクトやプロフィール情報をご覧いただけます。",
+};
+
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
       <>
