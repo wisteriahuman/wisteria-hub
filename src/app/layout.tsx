@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "@/components/layout/Header";
+import SearchAppBar from "@/components/layout/SearchAppBar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <title>Home | wisteria.dev</title>
           </head>
           <body>
-            <Header />
+            <SearchAppBar />
             <main>{children}</main>
           </body>
         </html>
