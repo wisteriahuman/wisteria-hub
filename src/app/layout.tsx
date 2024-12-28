@@ -10,9 +10,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <title>Home | wisteria.dev</title>
           </head>
-          <body style={{ backgroundColor: "#1e1c2f" }}>
+          <body style={{ backgroundColor: "#1e1c2f", color: "#ffffff"}}>
             <SearchAppBar />
             <main>{children}</main>
+            <footer></footer>
           </body>
         </html>
       </>
