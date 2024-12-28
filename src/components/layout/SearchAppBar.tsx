@@ -11,6 +11,9 @@ import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import LongMenu from "@/components/menu/LongMenu";
+import { usePathname } from "next/navigation";
+import { StayCurrentPortraitOutlined } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -54,6 +57,26 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const pathname = usePathname();
+
+    const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const getTitle = (path: string) => {
+        if (path == "/") return "Home";
+        const segments = path.split("/").filter(Boolean);
+        return segments[segments.length - 1];
+    };
+
+    const currentTitle = getTitle(pathname);
+
     return (
         <Box sx={{ flexGrow: 1, }}>
             <AppBar position="static" sx={{ backgroundColor: "secondary.dark" }}>
@@ -64,16 +87,18 @@ export default function SearchAppBar() {
                         color="inherit"
                         aria-label="open drawer"
                         sx={{ mr: 2 }}
+                        onClick={handleMenu}
                     >
                         <MenuIcon />
                     </IconButton>
+                    <LongMenu anchorEl={anchorEl} open={open} onClose={handleClose} />
                     <Typography
                         variant="h6"
                         noWrap
                         component="div"
                         sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
                     >
-                        wisteria.dev
+                        wisteria.dev | {currentTitle.charAt(0).toUpperCase() + currentTitle.slice(1)}
                     </Typography>
                     <Search>
                         <SearchIconWrapper>
