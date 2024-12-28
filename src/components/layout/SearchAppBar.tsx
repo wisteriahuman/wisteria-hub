@@ -13,7 +13,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import LongMenu from "@/components/menu/LongMenu";
 import { usePathname } from "next/navigation";
-import { StayCurrentPortraitOutlined } from "@mui/icons-material";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",

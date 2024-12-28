@@ -1,6 +1,7 @@
 import * as React from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useRouter } from "next/navigation"
 
 interface LongMenuProps {
     anchorEl: HTMLElement | null;
@@ -8,17 +9,24 @@ interface LongMenuProps {
     onClose: () => void;
 }
 
-const options = [
-    "Home",
-    "App",
-    "pages",
-    "About",
-    "Archive",
-];
+const options: { [key: string]: string } = {
+    "ホーム": "/",
+    "制作物": "projects",
+    "プロフィール": "profile",
+    "このサイトについて": "about",
+    "アーカイブ": "archive",
+};
 
 const ITEM_HEIGHT = 48;
 
 const LongMenu: React.FC<LongMenuProps> = ({ anchorEl, open, onClose }) => {
+    const router = useRouter();
+    
+    const handleMenuItemClick = (path: string) => {
+        router.push(path);
+        onClose();
+    }
+    
     return (
         <Menu
             id="long-menu"
@@ -37,11 +45,11 @@ const LongMenu: React.FC<LongMenuProps> = ({ anchorEl, open, onClose }) => {
                 },
             }}
         >
-            {options.map((option) => (
+            {Object.entries(options).map(([option, path]) => (
                 <MenuItem
                     key={option}
-                    selected={option === "Home"}
-                    onClick={onClose}
+                    selected={path === "/"}
+                    onClick={() => handleMenuItemClick(path)}
                 >
                     {option}
                 </MenuItem>
