@@ -1,41 +1,47 @@
 "use client";
 
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import Image from "next/image";
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    >
-        •
-    </Box>
-);
 
 export default function CardToProfile() {
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card
+            sx={{
+                winWidth: 275,
+                transition: "transform 0.2s",
+                "&:hover": { transform: "scale(1.05)" },
+            }}
+        >
+            <Image
+                src="/images/my_image.jpg"
+                alt="プロフィール画像"
+                width={140}
+                height={140}
+            />
             <CardContent>
                 <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
-                    Word of the Day
+                    プロフィール
                 </Typography>
                 <Typography variant="h5" component="div">
-                    be{bull}nev{bull}o{bull}lent
+                    好きなこととスキルを紹介
                 </Typography>
-                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>adjective</Typography>
+                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
+                    趣味 | 技術スタック
+                </Typography>
                 <Typography variant="body2">
-                    well meaning and kindly.
+                    私の好きなことや趣味、使用している技術スタックをまとめたサイトです。
                     <br />
-                    {'"a benevolent smile"'}
+                    コーディングから趣味の○○まで、私の興味や情熱をご覧ください！
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">詳細を見る</Button>
             </CardActions>
         </Card>
     );

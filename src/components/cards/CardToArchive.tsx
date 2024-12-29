@@ -1,41 +1,42 @@
 "use client";
 
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import ArchiveIcon from "@mui/icons-material/Archive";
 
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    >
-        •
-    </Box>
-);
 
 export default function CardToArchive() {
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card
+            sx={{
+                minWidth: 275,
+                transition: "transform 0.2s",
+                "&:hover": { transform: "scale(1.05)" },
+            }}
+        >
+            <ArchiveIcon sx={{ height: 140, width: 140 }} />
             <CardContent>
                 <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
-                    Word of the Day
+                    アーカイブ
                 </Typography>
                 <Typography variant="h5" component="div">
-                    be{bull}nev{bull}o{bull}lent
+                    過去と現在を一目で
                 </Typography>
-                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>adjective</Typography>
+                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
+                    記録 | プロジェクト | 思い出
+                </Typography>
                 <Typography variant="body2">
-                    well meaning and kindly.
+                    これまでのプロジェクトや活動の記録をまとめたページです。
                     <br />
-                    {'"a benevolent smile"'}
+                    過去の挑戦や成果を振り返りながら、新しい発見をしてみませんか？
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">詳細を見る</Button>
             </CardActions>
         </Card>
     );

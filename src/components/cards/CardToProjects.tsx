@@ -1,41 +1,41 @@
 "use client";
 
 import * as React from "react";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-
-const bull = (
-    <Box
-        component="span"
-        sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    >
-        •
-    </Box>
-);
+import AppIcon from "@mui/icons-material/Apps";
 
 export default function CardToProjects() {
     return (
-        <Card sx={{ minWidth: 275 }}>
+        <Card
+            sx={{
+                minWidth: 275,
+                transition: "transform 0.2s",
+                "&:hover": { transform: "scale(1.05)" },
+            }}
+        >
+            <AppIcon sx={{ height: 140, width: 140 }} />
             <CardContent>
                 <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
-                    Word of the Day
+                    個人開発
                 </Typography>
                 <Typography variant="h5" component="div">
-                    be{bull}nev{bull}o{bull}lent
+                    私が手がけた便利なアプリたち
                 </Typography>
-                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>adjective</Typography>
+                <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
+                    独自 | シンプル | 実用的
+                </Typography>
                 <Typography variant="body2">
-                    well meaning and kindly.
+                    すべて私が個人で開発したアプリケーションです。
                     <br />
-                    {'"a benevolent smile"'}
+                    日常をちょっと便利にするツールをぜひお試しください。
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small">詳細を見る</Button>
             </CardActions>
         </Card>
     );
