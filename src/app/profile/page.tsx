@@ -1,4 +1,5 @@
 import React from 'react';
+import Main from "@/components/profile/Main";
 
 export const metadata = {
     title: "Profile | wisteria.dev",
@@ -8,8 +9,7 @@ export const metadata = {
 export default function Profile() {
     return (
         <>
-            <h1>Profile Page</h1>
-            {/* プロフィールページのコンテンツ */}
+            <Main />
         </>
     );
 }
