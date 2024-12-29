@@ -11,7 +11,7 @@ interface CardTemplateProps {
     title: string;
     subtitle: string;
     tags: string[];
-    description: string;
+    description: React.ReactNode;
     buttonText: string;
     onClick: () => void;
 }
