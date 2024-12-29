@@ -40,8 +40,7 @@ export default function CardTemplate({
             <Box
                 sx={{
                     backgroundColor: "secondary.light",
-                    padding: "4px",
-                    borderRadius: "8px",
+                    borderRadius: "50%",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
