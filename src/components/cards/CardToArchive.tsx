@@ -8,9 +8,11 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import ArchiveIcon from "@mui/icons-material/Archive";
-
+import { useRouter } from "next/navigation";
 
 export default function CardToArchive() {
+    const router = useRouter();
+
     return (
         <Card
             sx={{
@@ -67,6 +69,7 @@ export default function CardToArchive() {
                             backgroundColor: "#4caf50",
                         },
                     }}
+                    onClick={() => router.push("/archive")}
                 >
                     詳細を見る
                 </Button>

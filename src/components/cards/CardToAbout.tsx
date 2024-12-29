@@ -8,8 +8,11 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import InfoIcon from "@mui/icons-material/Info";
+import { useRouter } from "next/navigation";
 
 export default function CardToAbout() {
+    const router = useRouter();
+
     return (
         <Card
             sx={{
@@ -66,6 +69,7 @@ export default function CardToAbout() {
                             backgroundColor: "#4caf50",
                         },
                     }}
+                    onClick={() => router.push("/about")}
                 >
                     詳細を見る
                 </Button>

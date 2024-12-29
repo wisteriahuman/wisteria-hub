@@ -8,9 +8,12 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 
 export default function CardToProfile() {
+    const router = useRouter();
+
     return (
         <Card
             sx={{
@@ -73,6 +76,7 @@ export default function CardToProfile() {
                             backgroundColor: "#4caf50",
                         },
                     }}
+                    onClick={() => router.push("/profile")}
                 >
                     詳細を見る
                 </Button>
