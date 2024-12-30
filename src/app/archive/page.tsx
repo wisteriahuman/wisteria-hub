@@ -1,8 +1,8 @@
 import React from "react";
 
 export const metadata = {
-    title: "Archive | wisteria.dev",
-    description: "過去のサイト一覧 | wisteria.dev",
+    title: "Archive | WisteriaHub",
+    description: "過去のサイト一覧 | WisteriaHub",
 }
 
 export default function Archive() {
