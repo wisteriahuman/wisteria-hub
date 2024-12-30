@@ -11,7 +11,7 @@ export default function CardToProjects() {
     return (
         <CardTemplate
             icon={<AppIcon sx={{ height: 140, width: 140, color: "#ffcdff" }} />}
-            title="私が手がけた便利なアプリたち"
+            title="私が手がけたアプリたち"
             subtitle="個人開発"
             tags={["独自", "シンプル", "実用的"]}
             description={
