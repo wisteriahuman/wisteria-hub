@@ -6,8 +6,8 @@ import CardToAbout from "@/components/cards/CardToAbout";
 import CardToArchive from "@/components/cards/CardToArchive";
 
 export const metadata = {
-  title: "Home | wisteria.dev",
-  description: "wisteria.devのホームページです。",
+  title: "Home | WisteriaHub",
+  description: "WisteriaHubのホームページです。",
 };
 
 export default function Home() {
