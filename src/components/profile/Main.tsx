@@ -3,9 +3,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
-import Button from "@mui/material/Button";
 import Techs from "@/components/techs/Techs";
 import HobbyInterests from "@/components/hobbyInterests/hobbyInterests";
+import Twitter from "@/components/sns/twitter";
+import GitHub from "@/components/sns/github";
+import AtCoder from "@/components/sns/atcoder";
 
 export default function Main() {
 
@@ -35,60 +37,9 @@ export default function Main() {
                         wisteria
                     </Typography>
                     <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap", marginBottom: 2 }}>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                color: "#ffffff",
-                                backgroundColor: "#000000",
-                                border: "1px solid #ffffff",
-                                borderRadius: "12px",
-                            }}
-                        >
-                            <Image
-                            src="/images/x.png"
-                            alt="X"
-                            width={24}
-                            height={24}
-                            style={{ marginRight: "8px" }}
-                            />
-                            @wisteria_man
-                        </Button>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                color: "#ffffff",
-                                backgroundColor: "#000000",
-                                border: "1px solid #ffffff",
-                                borderRadius: "12px",
-                            }}
-                        >
-                            <Image
-                                src="/images/github.png"
-                                alt="GitHub"
-                                width={24}
-                                height={24}
-                                style={{ marginRight: "8px" }}
-                            />
-                            wisteriahuman
-                        </Button>
-                        <Button
-                            variant="contained"
-                            sx={{
-                                color: "#000000",
-                                backgroundColor: "#ffffff",
-                                border: "1px solid #000000",
-                                borderRadius: "12px",
-                            }}
-                        >
-                            <Image
-                                src="/images/atcoder.png"
-                                alt="AtCoder"
-                                width={24}
-                                height={24}
-                                style={{ marginRight: "8px" }}
-                            />
-                            wisteriahuman
-                        </Button>
+                        <Twitter />
+                        <GitHub />
+                        <AtCoder />
                     </Box>
                     <Typography variant="body1" component="p">
                         こんにちは！wisteriaです。現在、公立はこだて未来大学1-Hです。
