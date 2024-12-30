@@ -3,7 +3,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid2";
-import ListBox from "@/components/techs/ListBox";
+import ListBox from "@/components/listBox/ListBox";
 
 
 
@@ -22,11 +22,11 @@ export default function Techs() {
                     <ListBox title="フレームワーク" items={techs_fw} dense={dense} />
                 </Grid>
             </Grid>
-            <Grid container spacing={2}>
+            {/* <Grid container spacing={2}>
                 <Grid sx={{ xs: 12, md: 6 }}>
                     <ListBox title="インフラ" items={["なし"]} dense={dense} />
                 </Grid>
-            </Grid>
+            </Grid> */}
         </Box>
     );
 }
