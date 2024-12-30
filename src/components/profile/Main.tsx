@@ -4,6 +4,7 @@ import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid2";
 import Image from "next/image";
 import Button from "@mui/material/Button";
+import Techs from "@/components/techs/Techs";
 
 export default function Main() {
 
@@ -92,16 +93,23 @@ export default function Main() {
                     <Typography variant="body1" component="p">
                         こんにちは！wisteriaです。現在、公立はこだて未来大学学部1年生です。
                     </Typography>
+                </Grid>
+            </Grid>
+            <Grid container spacing={4} alignItems="center">
+                <Box
+                    sx={{
+                        backgroundColor: "#2d1e36",
+                        padding: 2,
+                        border: "2px solid #cc00cc",
+                        borderRadius: "8px",
+                        marginTop: 4,
+                    }}
+                >
                     <Typography variant="h6" gutterBottom>
                         技術スタック
                     </Typography>
-                    <Box sx={{ display: "flex", gap: 1, flexWrap: "wrap", marginBottom: 2 }}>
-                        <Button variant="outlined">React</Button>
-                        <Button variant="outlined">TypeScript</Button>
-                        <Button variant="outlined">Next.js</Button>
-                        {/* 他のスキル */}
-                    </Box>
-                </Grid>
+                    <Techs />
+                </Box>
             </Grid>
         </Box>
     );
