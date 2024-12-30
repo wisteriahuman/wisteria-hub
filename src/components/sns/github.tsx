@@ -1,5 +1,3 @@
-"use client";
-
 import * as React from "react";
 import Button from "@mui/material/Button";
 import Image from "next/image";
@@ -8,6 +6,7 @@ export default function GitHub() {
     return (
         <Button
             variant="contained"
+            href="https://github.com/wisteriahuman"
             sx={{
                 color: "#ffffff",
                 backgroundColor: "#000000",
