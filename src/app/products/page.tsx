@@ -3,8 +3,8 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
 export const metadata = {
-    title: "Projects | WisteriaHub",
-    description: "プロジェクトページ | WisteriaHub",
+    title: "Products | WisteriaHub",
+    description: "プロダクトページ | WisteriaHub",
 }
 
 export default function Projects() {
@@ -28,7 +28,7 @@ export default function Projects() {
                         margin: "auto",
                     }}
                 >
-                    私が手がけたアプリたち
+                    わたしが手がけたアプリたち
                 </Typography>
             </Box>
         </>
