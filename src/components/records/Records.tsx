@@ -181,6 +181,7 @@ const activities = [
         date: "2024-11-30",
         title: "AtCoder Beginner Contest 382参加",
         description: "",
+        label: "競プロ",
     },
     {
         date: "2024-12-07",
@@ -215,7 +216,7 @@ export default function Records() {
             {activities.map((activity, index) => (
                 <ListItem key={index}>
                     <ListItemIcon>
-                        <CircleIcon style={{ color: label_colors[activity.label] }} />
+                        <CircleIcon style={{ color: label_colors[activity.label] || "#ffcdff" }} />
                     </ListItemIcon>
                     <Card
                         sx={{
