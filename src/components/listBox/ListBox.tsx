@@ -19,6 +19,8 @@ const ListBox: React.FC<Props> = ({ title, items, dense }) => {
                     backgroundColor: "#501a5e",
                     border: "2px solid #cc00cc",
                     borderRadius: "8px",
+                    width: "fit-content",
+                    height: "fit-content",
                 }}
             >
                 <List dense={dense}>

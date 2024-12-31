@@ -2,7 +2,9 @@ import React from "react";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid2 from "@mui/material/Grid2";
-import OutLine from "@/components/outLine/OutLine";
+import OutLine from "@/components/about/outLine/OutLine";
+import UseTechs from "@/components/about/useTechs/UseTechs";
+import Admininfo from "@/components/about/adminInfo/AdminInfo";
 
 export const metadata = {
     title: "About | WisteriaHub",
@@ -48,7 +50,8 @@ export default function About() {
                     }}
                 >
                     <OutLine />
-                    
+                    <UseTechs />
+                    <Admininfo />
                 </Grid2>
             </Box>
         </>
