@@ -7,6 +7,11 @@ export default function OutLine() {
     return (
         <>
             <Grid2
+                size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 4,
+                }}
                 sx={{
                     flexGrow: 1,
                     padding: 2,
