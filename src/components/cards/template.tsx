@@ -45,8 +45,8 @@ export default function CardTemplate({
                     justifyContent: "center",
                     alignItems: "center",
                     margin: "16px",
-                    width: 140,
-                    height: 140,
+                    width: "fit-content",
+                    height: "fit-content",
                 }}
             >
                 {icon}
