@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <>
       <Grid2 container spacing={2}>
-        <Grid2 size={{ xs: 12, sm: 6, md: 6 }}>
+        <Grid2 sx={{ xs: 12, sm: 6, md: 6 }}>
           <CardToProjects />
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 6 }}>
+        <Grid2 sx={{ xs: 12, sm: 6, md: 6 }}>
           <CardToProfile />
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 6 }}>
+        <Grid2 sx={{ xs: 12, sm: 6, md: 6 }}>
           <CardToAbout />
         </Grid2>
-        <Grid2 size={{ xs: 12, sm: 6, md: 6 }}>
+        <Grid2 sx={{ xs: 12, sm: 6, md: 6 }}>
           <CardToArchive />
         </Grid2>
       </Grid2>

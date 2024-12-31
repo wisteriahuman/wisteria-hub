@@ -35,6 +35,8 @@ export default function CardTemplate({
                 color: "#ffcdff",
                 border: "2px solid #cc00cc",
                 borderRadius: "8px",
+                width: "fit-content",
+                height: "fit-content",
             }}
         >
             <Box
