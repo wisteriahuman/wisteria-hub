@@ -1,5 +1,6 @@
 import React from "react";
 import SearchAppBar from "@/components/layout/SearchAppBar";
+import Footer from "@/components/layout/Footer";
 
 export const metadata = {
   title: "WisteriaHub",
@@ -18,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <body style={{ backgroundColor: "#1e1c2f", color: "#ffffff"}}>
             <SearchAppBar />
             <main>{children}</main>
-            <footer></footer>
+            <Footer />
           </body>
         </html>
       </>
