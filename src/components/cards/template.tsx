@@ -37,6 +37,8 @@ export default function CardTemplate({
                 borderRadius: "8px",
                 width: "fit-content",
                 height: "fit-content",
+                maxWidth: "100%",
+                maxHeight: "100%",
             }}
         >
             <Box

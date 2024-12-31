@@ -37,10 +37,12 @@ export default function About() {
                 <Grid2
                     container
                     spacing={2}
-                    sx={{
+                    size={{
                         xs: 12,
-                        md: 6,
                         sm: 6,
+                        md: 4,
+                    }}
+                    sx={{
                         flexGrow: 1,
                         padding: 2,
                         backgroundColor: "#2d1e36",
