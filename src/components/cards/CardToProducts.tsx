@@ -11,7 +11,7 @@ export default function CardToProjects() {
     return (
         <CardTemplate
             icon={<AppIcon sx={{ height: 140, width: 140, color: "#ffcdff" }} />}
-            title="私が手がけたアプリたち"
+            title="わたしが手がけたアプリたち"
             subtitle="個人開発"
             tags={["独自", "シンプル", "実用的"]}
             description={
@@ -22,7 +22,7 @@ export default function CardToProjects() {
                 </>
             }
             buttonText="詳細を見る"
-            onClick={() => router.push("/projects")}
+            onClick={() => router.push("/products")}
         />
     );
 }

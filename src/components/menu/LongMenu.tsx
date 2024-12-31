@@ -11,7 +11,7 @@ interface LongMenuProps {
 
 const options: { [key: string]: string } = {
     "ホーム": "/",
-    "制作物": "/projects",
+    "プロダクト": "/products",
     "プロフィール": "/profile",
     "このサイトについて": "/about",
     "アーカイブ": "/archive",

@@ -1,7 +1,7 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Grid from "@mui/material/Grid2";
+import Grid2 from "@mui/material/Grid2";
 import Image from "next/image";
 import Techs from "@/components/techs/Techs";
 import HobbyInterests from "@/components/hobbyInterests/hobbyInterests";
@@ -19,8 +19,8 @@ export default function Profile() {
     return (
         <>
             <Box sx={{ padding: 4, color: "#ffcdff"}}>
-                <Grid container spacing={4} alignItems="center">
-                    <Grid sx={{ xs: 12, sm: 8 }}>
+                <Grid2 container spacing={4} alignItems="center">
+                    <Grid2 sx={{ xs: 12, sm: 8 }}>
                         <Box sx={{ position: "relative", width: 140, height: 140, backgroundColor: "secondary.light", borderRadius: "50%" }}>
                             <Image
                                 src="/images/my_image.png"
@@ -30,8 +30,8 @@ export default function Profile() {
                                 style={{ borderRadius: "50%" }}
                             />
                         </Box>
-                    </Grid>
-                    <Grid sx={{ xs: 12, sm: 8 }}>
+                    </Grid2>
+                    <Grid2 sx={{ xs: 12, sm: 8 }}>
                         <Typography
                             variant="h4"
                             component="h1"
@@ -50,10 +50,10 @@ export default function Profile() {
                         <Typography variant="body1" component="p">
                             こんにちは！wisteriaです。現在、公立はこだて未来大学1-Hです。
                         </Typography>
-                    </Grid>
-                </Grid>
-                <Grid container spacing={4} alignItems="center">
-                    <Grid
+                    </Grid2>
+                </Grid2>
+                <Grid2 container spacing={4} alignItems="center">
+                    <Grid2
                         sx={{
                             backgroundColor: "#2d1e36",
                             padding: 2,
@@ -66,8 +66,8 @@ export default function Profile() {
                             技術スタック
                         </Typography>
                         <Techs />
-                    </Grid>
-                    <Grid
+                    </Grid2>
+                    <Grid2
                         sx={{
                             backgroundColor: "#2d1e36",
                             padding: 2,
@@ -77,8 +77,8 @@ export default function Profile() {
                         }}
                     >
                         <HobbyInterests />
-                    </Grid>
-                </Grid>
+                    </Grid2>
+                </Grid2>
             </Box>
         </>
     );
