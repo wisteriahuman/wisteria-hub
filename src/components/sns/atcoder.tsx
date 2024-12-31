@@ -7,12 +7,24 @@ export default function AtCoder() {
         <Button
             variant="contained"
             href="https://atcoder.jp/users/wisteriahuman"
+            target="_blank"
+            rel="noopener"
             sx={{
-                color: "#000000",
+                color: "#2e3436",
                 backgroundColor: "#ffffff",
-                border: "1px solid #000000",
-                borderRadius: "12px",
+                border: "none",
+                borderRadius: "25px",
+                paddingX: 3,
+                paddingY: 1,
+                textTransform: "none",
+                boxShadow: "0 4px 6px rgb(0, 0, 0, 0.1)",
+                transition: "background-color 0.3s, box-shadow 0.3s",
+                "&:hover": {
+                    backgroundColor: "#f5f5f5",
+                    boxShadow: "0 6px 8px rgba(0, 0, 0, 0.15)",
+                },
             }}
+            aria-label="AtCoderプロフィールへ移動"
         >
             <Image
                 src="/images/atcoder.png"

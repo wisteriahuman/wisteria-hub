@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Typography, Link, IconButton } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+// import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 export default function Footer() {
     return (
@@ -47,7 +47,7 @@ export default function Footer() {
                     >
                         <TwitterIcon />
                     </IconButton>
-                    <IconButton
+                    {/* <IconButton
                         component={Link}
                         href="https://www.linkedin.com/in/%E5%84%AA%E6%B0%97-%E8%97%A4%E4%BA%95-b104b0344/"
                         target="_blank"
@@ -56,7 +56,7 @@ export default function Footer() {
                         aria-label="LinkedIn"
                     >
                         <LinkedInIcon />
-                    </IconButton>
+                    </IconButton> */}
                 </Box>
             </Box>
             <Box mt={2}>
