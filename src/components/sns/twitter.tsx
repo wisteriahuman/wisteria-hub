@@ -1,25 +1,32 @@
 import * as React from "react";
 import Button from "@mui/material/Button";
-import Image from "next/image";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 export default function Twitter() {
     return (
         <Button
             variant="contained"
             href="https://x.com/wisteria_man"
+            target="_blank"
+            rel="noopener"
             sx={{
                 color: "#ffffff",
-                backgroundColor: "#000000",
-                border: "1px solid #ffffff",
-                borderRadius: "12px",
+                backgroundColor: "#1da1f2",
+                border: "none",
+                borderRadius: "25px",
+                paddingX: 3,
+                paddingY: 1,
+                textTransform: "none",
+                boxShadow: "background-color 0.3s, box-shadow 0.3s",
+                "&:hover": {
+                    backgroundColor: "#0d95e8",
+                    boxShadow: "0 6px 8px rgba(0, 0, 0, 0.15)",
+                },
             }}
+            aria-label="Twitterプロフィールへ移動"
         >
-            <Image
-            src="/images/x.png"
-            alt="X"
-            width={24}
-            height={24}
-            style={{ marginRight: "8px" }}
+            <TwitterIcon
+                sx={{ color: "#ffffff", marginRight: "8px" }}
             />
             @wisteria_man
         </Button>
