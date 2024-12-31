@@ -14,48 +14,50 @@ export const metadata = {
 export default function About() {
     return (
         <>
-            <Box sx={{ padding: 4, color: "#ffcdff"}}>
-                <Typography
-                    variant="h3"
-                    component="h1"
-                    gutterBottom
-                    sx={{
-                        fontWeight: "bold",
-                        flexGrow: 1,
-                        padding: 2,
-                        backgroundColor: "#2d1e36",
-                        border: "2px solid #cc00cc",
-                        borderRadius: 2,
-                        textAlign: "center",
-                        width: "fit-content",
-                        height: "fit-content",
-                        margin: "auto",
-                    }}
-                >
-                    WisteriaHubについて
-                </Typography>
-                <Grid2
-                    container
-                    spacing={2}
-                    size={{
-                        xs: 12,
-                        sm: 6,
-                        md: 4,
-                    }}
-                    sx={{
-                        flexGrow: 1,
-                        padding: 2,
-                        backgroundColor: "#2d1e36",
-                        border: "2px solid #cc00cc",
-                        borderRadius: 2,
-                        marginTop: 2,
-                    }}
-                >
-                    <OutLine />
-                    <UseTechs />
-                    <Admininfo />
-                </Grid2>
-            </Box>
+            <Typography
+                variant="h3"
+                component="h1"
+                gutterBottom
+                sx={{
+                    fontWeight: "bold",
+                    flexGrow: 1,
+                    padding: 2,
+                    color: "#ffcdff",
+                    backgroundColor: "#2d1e36",
+                    border: "2px solid #cc00cc",
+                    borderRadius: 2,
+                    textAlign: "center",
+                    width: "fit-content",
+                    height: "fit-content",
+                    margin: "auto",
+                }}
+            >
+                WisteriaHubについて
+            </Typography>
+            <Grid2
+                container
+                spacing={4}
+                size={{
+                    xs: 12,
+                    sm: 6,
+                    md: 6,
+                }}
+                sx={{
+                    flexGrow: 1,
+                    padding: 2,
+                    color: "#ffcdff",
+                    backgroundColor: "#2d1e36",
+                    border: "2px solid #cc00cc",
+                    borderRadius: 2,
+                    marginTop: 2,
+                    width: "fit-content",
+                    height: "fit-content",
+                }}
+            >
+                <OutLine />
+                <UseTechs />
+                <Admininfo />
+            </Grid2>
         </>
     );
 }

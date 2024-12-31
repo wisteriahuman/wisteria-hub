@@ -17,6 +17,8 @@ export default function OutLine() {
                     padding: 2,
                     backgroundColor: "#3e0866",
                     borderRadius: 2,
+                    width: "fit-content",
+                    height: "fit-content",
                 }}
             >
                 <Typography
