@@ -77,7 +77,7 @@ export default function SearchAppBar() {
     const currentTitle = getTitle(pathname);
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box component="header" sx={{ flexGrow: 1 }}>
             <AppBar position="static" sx={{ backgroundColor: "secondary.dark", color: "#ffcdff" }}>
                 <Toolbar>
                     <IconButton
