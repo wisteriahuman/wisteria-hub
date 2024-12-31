@@ -49,6 +49,8 @@ export default function Profile() {
                         </Box>
                         <Typography variant="body1" component="p">
                             こんにちは！wisteriaです。現在、公立はこだて未来大学1-Hです。
+                            <br />
+                            2024年4月からプログラミングを始め、いろいろな技術を学んでいます。
                         </Typography>
                     </Grid2>
                 </Grid2>

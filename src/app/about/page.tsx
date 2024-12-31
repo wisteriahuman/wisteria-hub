@@ -29,6 +29,7 @@ export default function About() {
                     width: "fit-content",
                     height: "fit-content",
                     margin: "auto",
+                    marginTop: 2,
                 }}
             >
                 WisteriaHubについて
