@@ -5,7 +5,7 @@ module.exports = {
     exclude: [],
     robotsTxtOptions: {
         additionalSitemaps: [
-            "https://www.wisteria-io.com/sitemap.xml",
+            // 必要に応じて追加
         ],
     },
 };
