@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.wisteria-io.com
+Host: https://wisteria-io.com
 
 # Sitemaps
-Sitemap: https://www.wisteria-io.com/sitemap.xml
+Sitemap: https://wisteria-io.com/sitemap.xml

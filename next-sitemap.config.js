@@ -1,6 +1,6 @@
 /** @type { import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: "https://www.wisteria-io.com",
+    siteUrl: "https://wisteria-io.com",
     generateRobotsTxt: true,
     exclude: [],
     robotsTxtOptions: {
