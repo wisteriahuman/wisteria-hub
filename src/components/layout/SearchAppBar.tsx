@@ -2,6 +2,7 @@
 
 
 import * as React from "react";
+import { useRouter } from "next/navigation";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -55,10 +56,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
+
+
 export default function SearchAppBar() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const pathname = usePathname();
+    const [searchText, setSearchText] = React.useState("");
+    const router = useRouter();
 
     const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorEl(event.currentTarget);
@@ -75,6 +80,13 @@ export default function SearchAppBar() {
     };
 
     const currentTitle = getTitle(pathname);
+
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        if (searchText.trim() != "") {
+            router.push(`/search?q=${encodeURIComponent(searchText.trim())}`);
+        }
+    };
 
     return (
         <Box component="header" sx={{ flexGrow: 1 }}>
@@ -99,15 +111,19 @@ export default function SearchAppBar() {
                     >
                         WisteriaHub | {currentTitle.charAt(0).toUpperCase() + currentTitle.slice(1)}
                     </Typography>
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ "aria-label": "search" }}
-                        />
-                    </Search>
+                    <form onSubmit={handleSubmit}>
+                        <Search>
+                            <SearchIconWrapper>
+                                <SearchIcon />
+                            </SearchIconWrapper>
+                            <StyledInputBase
+                                placeholder="Search…"
+                                inputProps={{ "aria-label": "search" }}
+                                value={searchText}
+                                onChange={(e) => setSearchText(e.target.value)}
+                            />
+                        </Search>
+                    </form>
                 </Toolbar>
             </AppBar>
         </Box>

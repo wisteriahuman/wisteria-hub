@@ -13,7 +13,7 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Grid2 container spacing={2}>
+      <Grid2 container spacing={2} sx={{ padding: 2 }}>
         <Grid2>
           <CardToProjects />
         </Grid2>
