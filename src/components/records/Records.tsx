@@ -1,6 +1,9 @@
+"use client";
+
 import * as React from "react";
 import { Card, CardContent, Typography, List, ListItem, ListItemIcon } from "@mui/material";
 import CircleIcon from '@mui/icons-material/Circle';
+import Grow from "@mui/material/Grow";
 
 const activities = [
     {
@@ -211,35 +214,68 @@ const label_colors: Record<string, string> = {
 };
 
 export default function Records() {
+    const [visibleItems, setVisibleItems] = React.useState<boolean[]>(Array(activities.length).fill(false));
+    const itemRefs = React.useRef<(HTMLElement | null)[]>([]);
+
+    React.useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const index = Number(entry.target.getAttribute("data-index"));
+                if (entry.isIntersecting) {
+                    setVisibleItems((prev) => {
+                        const newVisible = [...prev];
+                        newVisible[index] = true;
+                        return newVisible;
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        itemRefs.current.forEach((ref) => {
+            if (ref) observer.observe(ref);
+        });
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
         <List>
             {activities.map((activity, index) => (
-                <ListItem key={index}>
-                    <ListItemIcon>
-                        <CircleIcon style={{ color: label_colors[activity.label] || "#ffcdff" }} />
-                    </ListItemIcon>
-                    <Card
-                        sx={{
-                            minWidth: 275,
-                            transition: "transform 0.2s",
-                            "&:hover": { transform: "scale(1.05)" },
-                            backgroundColor: "#2d1e36",
-                            color: "#ffcdff",
-                            border: "2px solid #cc00cc",
-                            borderRadius: "8px",
-                            width: "fit-content",
-                            height: "fit-content",
-                            maxWidth: "100%",
-                            maxHeight: "100%",
-                        }}
+                <Grow in={visibleItems[index]} timeout={1000} key={index}>
+                    <ListItem
+                        ref={(el) => { itemRefs.current[index] = el; }}
+                        data-index={index}
+                        key={index}
                     >
-                        <CardContent>
-                            <Typography variant="h6" sx={{ borderBottom: "2px solid #ffcdff" }}>{activity.date}</Typography>
-                            <Typography variant="subtitle1">{activity.title}</Typography>
-                            <Typography variant="body2" sx={{ marginTop: 1 }}>{activity.description}</Typography>
-                        </CardContent>
-                    </Card>
-                </ListItem>
+                        <ListItemIcon>
+                            <CircleIcon style={{ color: label_colors[activity.label] || "#ffcdff" }} />
+                        </ListItemIcon>
+                        <Card
+                            sx={{
+                                minWidth: 275,
+                                transition: "transform 0.2s",
+                                "&:hover": { transform: "scale(1.05)" },
+                                backgroundColor: "#2d1e36",
+                                color: "#ffcdff",
+                                border: "2px solid #cc00cc",
+                                borderRadius: "8px",
+                                width: "fit-content",
+                                height: "fit-content",
+                                maxWidth: "100%",
+                                maxHeight: "100%",
+                            }}
+                        >
+                            <CardContent>
+                                <Typography variant="h6" sx={{ borderBottom: "2px solid #ffcdff" }}>{activity.date}</Typography>
+                                <Typography variant="subtitle1">{activity.title}</Typography>
+                                <Typography variant="body2" sx={{ marginTop: 1 }}>{activity.description}</Typography>
+                            </CardContent>
+                        </Card>
+                    </ListItem>
+                </Grow>
             ))}
         </List>
     );
