@@ -2,7 +2,7 @@
 
 
 import * as React from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -13,7 +13,6 @@ import InputBase from "@mui/material/InputBase";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import LongMenu from "@/components/menu/LongMenu";
-import { usePathname } from "next/navigation";
 
 const Search = styled("div")(({ theme }) => ({
     position: "relative",
@@ -87,6 +86,12 @@ export default function SearchAppBar() {
             router.push(`/search?q=${encodeURIComponent(searchText.trim())}`);
         }
     };
+
+    React.useEffect(() => {
+        if (pathname !== "/search") {
+            setSearchText("");
+        }
+    }, [pathname]);
 
     return (
         <Box component="header" sx={{ flexGrow: 1 }}>

@@ -5,7 +5,7 @@ import CardTemplate from "./template";
 import AppIcon from "@mui/icons-material/Apps";
 import { useRouter } from "next/navigation";
 
-export default function CardToProjects() {
+export default function CardToProducts() {
     const router = useRouter();
 
     return (
