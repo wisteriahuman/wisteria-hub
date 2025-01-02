@@ -1,9 +1,11 @@
 import React from "react";
 import Grid2 from "@mui/material/Grid2";
-import CardToProjects from "@/components/cards/CardToProducts";
+import AnimatedCard from "@/components/ani/AnimatedCard";
+import CardToProducts from "@/components/cards/CardToProducts";
 import CardToProfile from "@/components/cards/CardToProfile";
 import CardToAbout from "@/components/cards/CardToAbout";
 import CardToArchive from "@/components/cards/CardToArchive";
+
 
 export const metadata = {
   title: "Home | WisteriaHub",
@@ -11,21 +13,22 @@ export const metadata = {
 };
 
 export default function Home() {
+
   return (
     <>
       <Grid2 container spacing={2} sx={{ padding: 2 }}>
-        <Grid2>
-          <CardToProjects />
-        </Grid2>
-        <Grid2>
+        <AnimatedCard delay={0}>
+          <CardToProducts />
+        </AnimatedCard>
+        <AnimatedCard delay={200}>
           <CardToProfile />
-        </Grid2>
-        <Grid2>
+        </AnimatedCard>
+        <AnimatedCard delay={400}>
           <CardToAbout />
-        </Grid2>
-        <Grid2>
+        </AnimatedCard>
+        <AnimatedCard delay={600}>
           <CardToArchive />
-        </Grid2>
+        </AnimatedCard>
       </Grid2>
     </>
   );

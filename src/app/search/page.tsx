@@ -3,8 +3,9 @@
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import Grid2 from "@mui/material/Grid2";
+import AnimatedCard from "@/components/ani/AnimatedCard";
 import CardToProfile from "@/components/cards/CardToProfile";
-import CardToProjects from "@/components/cards/CardToProducts";
+import CardToProducts from "@/components/cards/CardToProducts";
 import CardToArchive from "@/components/cards/CardToArchive";
 import CardToAbout from "@/components/cards/CardToAbout";
 
@@ -53,13 +54,13 @@ export default function SearchPage() {
 
         switch (item.type) {
             case "products":
-                return <CardToProjects key={index} {...commonProps} />;
+                return <AnimatedCard><CardToProducts key={index} {...commonProps} /></AnimatedCard>;
             case "profile":
-                return <CardToProfile key={index} {...commonProps} />;
+                return <AnimatedCard><CardToProfile key={index} {...commonProps} /></AnimatedCard>;
             case "archive":
-                return <CardToArchive key={index} {...commonProps} />;
+                return <AnimatedCard><CardToArchive key={index} {...commonProps} /></AnimatedCard>;
             case "about":
-                return <CardToAbout key={index} {...commonProps} />;
+                return <AnimatedCard><CardToAbout key={index} {...commonProps} /></AnimatedCard>;
             default:
                 return null;
         }
