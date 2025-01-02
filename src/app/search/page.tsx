@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useSearchParams, useRouter } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import Grid2 from "@mui/material/Grid2";
 import CardToProfile from "@/components/cards/CardToProfile";
 import CardToProjects from "@/components/cards/CardToProducts";
@@ -42,7 +42,6 @@ export default function SearchPage() {
         }
     }, [q]);
 
-    const router = useRouter();
     const renderCard = (item: SearchResults, index: number) => {
 
         const commonProps = {
