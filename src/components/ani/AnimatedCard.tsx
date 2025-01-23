@@ -40,6 +40,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, timeout = 1000, d
     const [visible, setVisible] = React.useState(false);
 
     React.useEffect(() => {
+        const currentRef = ref.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -50,13 +51,13 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, timeout = 1000, d
             { threshold: 0.1 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentRef) {
+            observer.observe(currentRef);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentRef) {
+                observer.unobserve(currentRef);
             }
         };
     }, []);
