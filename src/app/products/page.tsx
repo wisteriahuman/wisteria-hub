@@ -1,5 +1,7 @@
 import * as React from "react";
 import Typography from "@mui/material/Typography";
+import CardToWisteriaBloom from "@/components/cards/products/CardToWisteriaBloom";
+import AnimatedCard from "@/components/ani/AnimatedCard";
 
 export const metadata = {
     title: "Products | WisteriaHub",
@@ -39,7 +41,9 @@ export default function Projects() {
                     marginTop: 2,
                 }}
             >
-                現在、利用可能なプロダクトはありません。近日公開予定です。
+                <AnimatedCard delay={0}>
+                    <CardToWisteriaBloom />
+                </AnimatedCard>
             </Typography>
         </>
     );

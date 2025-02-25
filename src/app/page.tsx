@@ -5,6 +5,7 @@ import CardToProducts from "@/components/cards/CardToProducts";
 import CardToProfile from "@/components/cards/CardToProfile";
 import CardToAbout from "@/components/cards/CardToAbout";
 import CardToArchive from "@/components/cards/CardToArchive";
+import CardToWisteriaBloom from "@/components/cards/products/CardToWisteriaBloom";
 
 
 export const metadata = {
@@ -28,6 +29,9 @@ export default function Home() {
         </AnimatedCard>
         <AnimatedCard delay={600}>
           <CardToArchive />
+        </AnimatedCard>
+        <AnimatedCard delay={0}>
+          <CardToWisteriaBloom />
         </AnimatedCard>
       </Grid2>
     </>
